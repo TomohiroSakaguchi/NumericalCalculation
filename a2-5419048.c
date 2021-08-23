@@ -2,7 +2,7 @@
 int main(void)
 {
 	int i, j,max,min;
-	int a[ ]={18,23,41,31,11,21,36};
+	int a[ ]={18,23,41,22998784,11,-21,36};
 	max=a[0];
 	min=a[0];//配列の先頭の数を最小と最大にして問題ない気がする，このアルゴリズムであれば
 	int len_a = sizeof(a)/sizeof(int);//配列の長さはこれで出す方が汎用性が高い
@@ -14,8 +14,8 @@ int main(void)
 	}
 	for(j=0;j<len_a;j++){
 		printf("min=%d, a[%d]=%d\n", min , j, a[ j ] );
-		if(min<a[j]){
-			min=min;
+		if(a[j]<min){
+			min=a[j];
 		}
 	}
 

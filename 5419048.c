@@ -6,8 +6,8 @@ int main(void){
 	a=1.0;
 	b=3.0;
 	c=2.0;
-x1=(-b+sqrt((b^2)-(4*a*c)))/(2*a);
-x2=(-b-sqrt((b^2)-(4*a*c)))/(2*a);
+x1=(-b+sqrt((b*b)-(4*a*c)))/(2*a);
+x2=(-b-sqrt((b*b)-(4*a*c)))/(2*a);
 
 printf("x1=%lf\n",x1);
 printf("x2=%lf\n",x2);

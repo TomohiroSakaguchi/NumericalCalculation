@@ -4,7 +4,7 @@ double f(double x);
 int main (void){
 	int i;
 	double a,b,m,za,zb,zm,p,q,n,zp,zq,zn;
-	double significant = 3;//小数点以下どこまで使うのか
+	double significant = 4;//小数点以下どこまで使うのか
 	double threshold;
 	a=-4.0;
 	b=-1.0;
@@ -21,7 +21,7 @@ int main (void){
 		if(threshold > 0.0){
 			a=m;
 		}else if (threshold == 0) {
-			printf("break!\n");//for抜け確認用
+			//printf("break!\n");//for抜け確認用
 			break;
 		} else {
 			b=m;
@@ -38,7 +38,7 @@ int main (void){
 		if(threshold < 0.0){
 			p=zm;
 		}else if (threshold == 0) {
-			printf("break!\n");//for抜け確認用
+			//printf("break!\n");//for抜け確認用
 			break;
 		} else {
 			q=zm;

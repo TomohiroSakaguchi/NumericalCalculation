@@ -27,8 +27,23 @@ int main (void){
 			b=m;
 		}
 	}
+
 	//正の解を求める;
-	//for
+	for(i=0;i<50;i++){
+		zm=(p+q)/2.0;
+		zp=f(p);
+		zq=f(q);
+		threshold=round(f(zm)*point)/point;
+		printf("正の解m=%lf,threshold=%lf, iteration=%d\n",zm,threshold, i+1);
+		if(threshold < 0.0){
+			p=zm;
+		}else if (threshold == 0) {
+			printf("break!\n");//for抜け確認用
+			break;
+		} else {
+			q=zm;
+		}
+	}
 	return 0;
 }
 

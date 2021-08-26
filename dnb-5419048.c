@@ -2,7 +2,6 @@
 #include <math.h>
 double f(double x);
 double df(double x);
-double dfm(double x);
 int main(void){
 	int i;
 	double x,eps;
@@ -37,11 +36,5 @@ double f(double x){
 double df(double x){
 	double d;
 	d=2.0*x;
-	return d;
-}
-
-double dfm(double x){
-	double d;
-	d = -2.0*x;
 	return d;
 }

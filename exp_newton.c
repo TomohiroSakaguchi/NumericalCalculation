@@ -13,9 +13,9 @@ int main(void){
 			break;
 		}
 		x=x1;
-		printf("x1=%lf,x-x1=%.8f\n",x,x-x1);
+		printf("x1=%lf,x-x1=%.8f, iteration=%d\n",x,x-x1,i+1);
 	}
-	x = -10.0;
+	x = -1.0;
 	for(i=0;i<=1000;i++){
 		double x1 = x - f(x)/df(x);
 		//printf("%lf\n", x1);
@@ -23,18 +23,18 @@ int main(void){
 			break;
 		}
 		x=x1;
-		printf("x2=%lf,x-x1=%.8f\n",x,x-x1);
+		printf("x2=%lf,x-x1=%.8f, iteration=%d\n",x,x-x1,i+1);
 	}
 
 	return 0;
 }
 double df(double x){
-	double c,eff=904.8;
+	double c,eff=104.8;
 	c=4*eff*x*exp(-eff*pow(x,2))-eff*exp(eff*x);
 	return c;
 }
 double f(double x){
-	double d,eff=904.8;
+	double d,eff=104.8;
 	d=2*exp(-eff*pow(x,2))-exp(eff*x);
 	return d;
 }

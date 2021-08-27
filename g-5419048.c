@@ -20,39 +20,18 @@ int main (void){
 	for (int j = 0; j < 4; j++) {
 		a[0][j] = a[0][j]/t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	//a[0][0]を1にした
 	//a[1][0]が0になるように2行目引き算
 	t=a[1][0];
 	for (j = 0; j < 4; j++) {
 		a[1][j]=a[1][j] - a[0][j]*t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	//a[1][0]が0になるように2行目引き算した
 	//a[2][0]が0になるように3行目引き算
 	t=a[2][0];
 	for (j = 0; j < 4; j++) {
 		a[2][j]=a[2][j] - a[0][j]*t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	//a[2][0]が0になるように3行目引き算した
 	//一列目の操作終わり
 	//二列目の操作
@@ -60,70 +39,28 @@ int main (void){
 	for (j = 0; j < 4; j++) {
 		a[1][j]=a[1][j]/t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	t=a[0][1];
 	for (j = 0; j < 4; j++) {
 		a[0][j]=a[0][j]-a[1][j]*t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	t=a[2][1];
 	for (j = 0; j < 4; j++) {
 		a[2][j]=a[2][j]-a[1][j]*t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	//2列目操作終わり
 	//3列目操作ここから
 	t=a[2][2];
 	for (j = 0; j < 4; j++) {
 		a[2][j]=a[2][j]/t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	t=a[0][2];
 	for (j = 0; j < 4; j++) {
 		a[0][j]=a[0][j]-a[2][j]*t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	t=a[1][2];
 	for (j = 0; j < 4; j++) {
 		a[1][j]=a[1][j]-a[2][j]*t;
 	}
-	for(i=0;i<3;i++){
-		for(j=0;j<4;j++){
-			printf("%lf ",a[ i ][ j ]);
-		}
-		printf("\n");
-	}
-	printf("->\n");
 	//3列目おわり
 	/*for(i=0;i<=1;i++){
 		t=a [ i ][ i ];
@@ -149,11 +86,11 @@ int main (void){
 			}
 		}
 	}*/
-	/*for(i=0;i<3;i++){
+	for(i=0;i<3;i++){
 		for(j=0;j<4;j++){
 			printf("%lf ",a[ i ][ j ]);
 		}
 		printf("\n");
-	}*/
+	}
 	return 0;
 }
